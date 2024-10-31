@@ -1,0 +1,3 @@
+```
+ npx vsce package
+```

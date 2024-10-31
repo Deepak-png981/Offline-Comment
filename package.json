@@ -3,6 +3,9 @@
     "displayName": "Offline Comment",
     "description": "Mark, update, and manage interactive comments in code",
     "version": "0.0.1",
+    "icon": "Images/offline_comment.jpg",
+    "publisher": "DeepakJoshi",
+    "repository": "https://github.com/Deepak-png981/Offline-Comment",
     "engines": {
       "vscode": "^1.95.0"
     },
