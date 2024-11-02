@@ -2,7 +2,7 @@
     "name": "offline-comment",
     "displayName": "Offline Comment",
     "description": "Mark, update, and manage interactive comments in code",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "icon": "Images/offlineComment.jpg",
     "publisher": "DeepakJoshi",
     "repository": "https://github.com/Deepak-png981/Offline-Comment",
@@ -73,7 +73,19 @@
         "key": "ctrl+r",
         "when": "editorTextFocus"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Offline Comment Settings",
+      "properties": {
+        "offlineComment.commentColor": {
+          "type": "string",
+          "enum": ["blue", "green", "purple", "orange", "red", "teal", "pink", "brown"],
+          "default": "blue",
+          "description": "Select the color for comments."
+        }
+      }
+    }
   },
     "scripts": {
       "vscode:prepublish": "npm run package",

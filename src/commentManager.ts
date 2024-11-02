@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
 import { CommentCodeLensProvider } from './commentCodeLensProvider';
-import { getRandomColor } from './color';
 
 export let comments = new Map<string, { text: string; color: string }>();
 let commentDecorationType: vscode.TextEditorDecorationType;
@@ -98,7 +97,7 @@ export const handleInlineEdit = async (line: number, uri: vscode.Uri) => {
     if (updatedComment.trim() === '') {
       comments.delete(key);
     } else {
-      const color = comments.get(key)?.color || getRandomColor();
+      const color = comments.get(key)?.color ||  vscode.workspace.getConfiguration('offlineComment').get<string>('commentColor') || 'pink';
       comments.set(key, { text: updatedComment, color });
     }
     updateDecorations();
@@ -115,7 +114,7 @@ export const addComment = async () => {
 
   const commentText = await vscode.window.showInputBox({ prompt: 'Enter your comment' });
   if (commentText && commentText.trim() !== '') {
-    const color = getRandomColor();
+    const color = vscode.workspace.getConfiguration('offlineComment').get<string>('commentColor') || 'pink';
     const key = getCommentKey(uri, line);
     comments.set(key, { text: commentText, color });
     updateDecorations();
