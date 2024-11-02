@@ -56,7 +56,24 @@
           "group": "navigation"
         }
       ]
-    }
+    },
+    "keybindings": [
+      {
+        "command": "myCommentExtension.addComment",
+        "key": "ctrl+o",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "myCommentExtension.updateComment",
+        "key": "ctrl+u",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "myCommentExtension.removeComment",
+        "key": "ctrl+r",
+        "when": "editorTextFocus"
+      }
+    ]
   },
     "scripts": {
       "vscode:prepublish": "npm run package",
