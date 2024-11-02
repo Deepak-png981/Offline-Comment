@@ -2,7 +2,7 @@
     "name": "offline-comment",
     "displayName": "Offline Comment",
     "description": "Mark, update, and manage interactive comments in code",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "icon": "Images/offlineComment.jpg",
     "publisher": "DeepakJoshi",
     "repository": "https://github.com/Deepak-png981/Offline-Comment",
