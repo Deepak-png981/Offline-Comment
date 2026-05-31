@@ -1,5 +1,6 @@
 # Offline Comment
-![Offline Comment](./Images/image.png)
+![Market Place](./Images/image.png)
+![Offline Comment](./Images/extension.png)
 
 ## Introduction
 
